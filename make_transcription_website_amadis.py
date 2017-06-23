@@ -51,9 +51,9 @@ with codecs.open("%s/index.html" % (github_dir), 'w', encoding='utf8') as index_
           fout.write('<table><tr><td>\n')
           with codecs.open("%s/%s%s" % (book_dir, page_name, suffix), 'r', encoding='utf8') as fin:
             for line in fin:
-              fout.write("%s<br/>\n" % (line.strip()))
+              fout.write("%s<br/><br/>\n" % (line.strip()))
           fout.write('</td><td>\n')
-          fout.write('<img src="http://halperta.com/amadis/img/%s/-line_extract.png">\n' % (page_name))
+          fout.write('<img src="http://halperta.com/amadis/img/%s-line_extract.png" height="2000">\n' % (page_name))
           fout.write('</td></tr></table>\n')
           fout.write('</body>\n')
           fout.write('</html>\n')
